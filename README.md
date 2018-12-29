@@ -1,6 +1,4 @@
-# Docket
-
-## We need two Docker Container
+## We need two Docker Containers
 
 ## 1. Dockerfile.dev
 ### In order to build image
@@ -22,7 +20,7 @@ docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app <image id>
 ```
 run docker-compose up
 ```
-build and run
+Build and Run
 ```
 docker-compose up --build
 ```
@@ -45,7 +43,7 @@ Using multistep docker
 ```
 docker build .
 ```
-### run producation server, nginx use port 80 as default
+### Run producation server, nginx use port 80 as default
 ```
 docker run -p 8080:80 <image id>
 ```
