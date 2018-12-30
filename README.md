@@ -1,4 +1,7 @@
 ## We need two Docker Containers
+Dockerfile.dev is for development model, Dockerfile is for production model.<br>
+The workflow of deployment is
+Push changes to feature branch => Pull Request => Master Branch => Travis CI FLow => AWS
 
 ## 1. Dockerfile.dev
 ### In order to build image
