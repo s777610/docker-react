@@ -5,13 +5,17 @@ language: generic
 services:
   - docker
 
-# build image using Dockerfile.dev
+# build image using Dockerfile.dev in order to run test
 before_install:
   - docker build -t s777610/docker-react -f Dockerfile.dev .
 
+# -- --coverage means stop running after testing
+# travis will inform us if code pass testing
+# if pass, we can merge code
 script:
   - docker run s777610/docker-react npm run test -- --coverage
 
+# after merge code, deploying processes will be start automatically
 deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
