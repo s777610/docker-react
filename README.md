@@ -1,7 +1,9 @@
 ## We need two Docker Containers
 Dockerfile.dev is for development model, Dockerfile is for production model.<br>
 The workflow of deployment is
-Push changes to feature branch => Pull Request => Master Branch => Travis CI FLow => AWS
+### Push changes to feature branch => Pull Request => Master Branch => Travis CI FLow => AWS Elastic Beanstalk<br>
+- The Travis CI will test our app automatically if we provide .travis.yml
+- Create EB env, then create User for EB, then get AWS_ACCESS_KEY and AWS_SECRET_KEY and put them on travis CI as env variable.
 
 ## 1. Dockerfile.dev
 ### In order to build image
