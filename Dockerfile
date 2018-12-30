@@ -13,4 +13,5 @@ RUN npm run build
 # second container
 # start building prod server, and copy files into new container
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
